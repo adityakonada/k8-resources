@@ -14,9 +14,9 @@ spec:
      ports:
       - containerPort: 80 
      env:
-      - name: Demo_Greeting env1
+      - name: Demo_Greeting_env1
         value: "Hello from the environment variable"
-      - name: Demo_Greeting env2
+      - name: Demo_Greeting_env2
         value: "mysql.roboshop.internal"
       
 #we can put heavy information in annotations 
