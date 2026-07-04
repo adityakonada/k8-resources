@@ -9,7 +9,7 @@ metadata:
     jenkins.url: "http://jenkins:8080/job/my-job/#45"
 spec:
    containers:
-   - name: nginx
+   - name: env-demo-container-nginx
      image: nginx
      ports:
       - containerPort: 80 
@@ -19,4 +19,4 @@ spec:
       - name: Demo_Greeting_env2
         value: "mysql.roboshop.internal"
       
-#we can put heavy information in annotations 
+# environment variables are used to pass information
