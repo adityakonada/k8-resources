@@ -1,4 +1,4 @@
-Api Version: v1
+apiVersion: v1
 Kind: Pod
 metadata:
   name: multi-container-pod
