@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: env-pod
+  labels:  
+    purpose: demonstrate environment variables
+  annotations:  # it is a key:value pair which is used to add metadata to the pod. It is used to store additional information about the pod.
+    com.roboshop.training.duration: "120 hours"
+    jenkins.url: "http://jenkins:8080/job/my-job/#45"
+spec:
+   containers:
+   - name: nginx
+     image: nginx
+     ports:
+      - containerPort: 80 
+     env:
+      - name: Demo_Greeting env1
+        value: "Hello from the environment variable"
+      - name: Demo_Greeting env2
+        value: "mysql.roboshop.internal"
+      
+#we can put heavy information in annotations 
