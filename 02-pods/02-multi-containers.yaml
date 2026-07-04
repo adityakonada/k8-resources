@@ -1,0 +1,14 @@
+Api Version: v1
+Kind: Pod
+metadata:
+  name: multi-container-pod
+  spec:
+    containers:
+    - name: nginx
+      image: nginx
+      ports:
+      - containerPort: 80 
+
+    - name: almalinux
+      image: almalinux:8
+      command: ["sleep", "300"]
