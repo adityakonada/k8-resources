@@ -21,6 +21,8 @@ spec:
         configMapKeyRef:
           name: devops-config
           key: trainer
+
+#alternative way to use configmap in pod
 ---
 apiVersion: v1
 kind: Pod
