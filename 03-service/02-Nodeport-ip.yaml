@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-nodeport-pod
+  labels:
+    app: nginx-nodeport
+    demo: service
+spec:
+  containers:
+  - name: nginx-nodeport-container
+    image: nginx
+    ports:
+    - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-nodeport-service
+spec:
+  type: NodePort
+  selector: #the selector is used to find the pods that will be exposed by this service
+    app: nginx-nodeport
+    demo: service #selected pods must have these labels /like filters applied to pods/
+  ports:
+      - protocol: TCP
+        port: 80 #service port that will be exposed to the outside world
+        targetPort: 80 #container port that the service will forward traffic to
