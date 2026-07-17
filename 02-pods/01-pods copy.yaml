@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod-tester
+  name: dummy-pod-tester
  # namespace: roboshop-tester
 spec:
   #list of containers
   containers:
-  - name: nginx
-    image: nginx
+  - name: alpine
+    image: alpine
     ports:
-    - containerPort: 80
+    - containerPort: 9999
 
 #since no namespace is specified, the pod will be created in the default namespace.
