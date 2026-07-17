@@ -6,9 +6,9 @@ metadata:
 spec:
   #list of containers
   containers:
-  - name: alpine
-    image: alpine
+  - name: dummy-pod-container
+    image: nginx
     ports:
-    - containerPort: 9999
+    - containerPort: 80 
 
 #since no namespace is specified, the pod will be created in the default namespace.
